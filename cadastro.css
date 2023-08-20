@@ -1,0 +1,10 @@
+.input{
+    width: 15%;
+    margin: 0.7rem;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 3px;
+}
