@@ -1,31 +1,26 @@
 function cadastrar() {
-  console.log("Calculando...");
 
   const dadosProduto = new Map();
 
   //Entrada de Dados
-  dadosProduto.set(
-    "codigo",
-    document.querySelector("#codigo").value.toUpperCase()
-  );
-  dadosProduto.set("produto", document.querySelector("#produto").value);
-  dadosProduto.set(
-    "quantidade",
-    Number(document.querySelector("#quantidade").value)
-  );
-  dadosProduto.set("preco", Number(document.querySelector("#preco").value));
-
-  // console.log('codigo: ', dadosProduto.get('codigo'));
-  // console.log('produto: ', dadosProduto.get('produto'));
-  // console.log('quantidade: ', dadosProduto.get('quantidade'));
-  // console.log('preco: ', dadosProduto.get('preco'));
-  // console.log('total: ', dadosProduto.get('total'));
+  let codigo = document.querySelector("#codigo").value.toUpperCase();
+  let produto = document.querySelector("#produto").value;
+  let quantidade =  Number(document.querySelector("#quantidade").value);
+  let preco = Number(document.querySelector("#preco").value);
 
   //Processamento
+    
+  dadosProduto.set("codigo", codigo);
+  dadosProduto.set("produto", produto);
+  dadosProduto.set("quantidade", quantidade);
+  dadosProduto.set("preco", preco);
+
   dadosProduto.set(
     "total",
     dadosProduto.get("quantidade") * dadosProduto.get("preco")
   );
+
+
 
   //Saída
   document.querySelector("table").innerHTML += `<tr>
